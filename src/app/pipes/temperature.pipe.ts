@@ -36,6 +36,6 @@ export class TemperaturePipe implements PipeTransform {
       symbol = outputType === 'cel' ? Measure.Celsius : Measure.Fahrenheit;
     }
 
-    return `${outputTemperature} ${symbol}`;
+    return `${outputTemperature.toFixed(2)} ${symbol}`;
   }
 }

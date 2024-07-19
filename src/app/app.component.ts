@@ -23,6 +23,11 @@ export class AppComponent {
   ];
 
   onReset(index: number) {
-    this.historicTemperatures[index] = 18;
+    // We can NOT doing this way because Angular will not detect the change
+    // this.historicTemperatures[index] = 18;
+
+    const newTemperatures = [...this.historicTemperatures];
+    newTemperatures[index] = 18;
+    this.historicTemperatures = newTemperatures;
   }
 }

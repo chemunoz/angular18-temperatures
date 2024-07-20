@@ -24,10 +24,11 @@ export class AppComponent {
 
   onReset(index: number) {
     // We can NOT doing this way because Angular will not detect the change
-    // this.historicTemperatures[index] = 18;
+    this.historicTemperatures[index] = 18;
 
-    const newTemperatures = [...this.historicTemperatures];
-    newTemperatures[index] = 18;
-    this.historicTemperatures = newTemperatures;
+    // OPTION if the Pipe is pure: true (default)
+    // const newTemperatures = [...this.historicTemperatures];
+    // newTemperatures[index] = 18;
+    // this.historicTemperatures = newTemperatures;
   }
 }
